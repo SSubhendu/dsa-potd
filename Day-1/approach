@@ -1,0 +1,14 @@
+let's breakdown the problem :
+
+    - We sort the ranges array by their start index.
+    - We loop through each range and select it as the first range. We also initialize the second range to None.
+    - We search for the second range that doesn't overlap with the first range by incrementing the index j until we find a range whose -start index is greater than the end index of the first range.
+    - If we find a second range, we select it and update the maximum coins.
+    - We also check if there is a second range that only touches the first range by checking if the start index of the next range after - is equal to the end index of the first range plus one. If there is such a range, we select it and update the maximum coins.
+    - We return the maximum coins.
+    
+The time complexity of this solution is O(nlogn) due to the sorting of the ranges array, and the space complexity is O(1) since we - are not using any additional data structures.
+
+
+
+
