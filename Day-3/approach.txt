@@ -1,0 +1,12 @@
+To solve this problem, we can use dynamic programming. We will create a 2D array dp of size (k+1) x (target+1), where dp[i][j] represents whether it is possible to make a change of j cents using i coins.
+
+We can initialize the base cases as follows:
+
+dp[0][0] = 1, since it is always possible to make a change of 0 cents using 0 coins.
+dp[i][0] = 1 for all i, since it is always possible to make a change of 0 cents using any number of coins.
+dp[0][j] = 0 for all j > 0, since it is not possible to make a change using 0 coins.
+For each cell dp[i][j], we have two choices:
+
+We do not use the ith coin, so dp[i][j] = dp[i-1][j].
+We use the ith coin, so dp[i][j] = dp[i][j-coins[i-1]].
+Finally, we can return dp[k][target], which represents whether it is possible to make a change of target cents using exactly k coins.
