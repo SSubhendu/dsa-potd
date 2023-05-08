@@ -1,0 +1,7 @@
+To solve this problem, we need to convert the binary string s to its corresponding decimal value k, and then calculate k mod m. We can use the following algorithm to do this:
+
+Initialize a variable k to 0.
+Iterate over each character c in the string s from left to right.
+For each character c, multiply the current value of k by 2 and add the integer value of c to it (i.e. 0 or 1).
+After the iteration, k will be the decimal equivalent of the binary string s.
+Return k mod m as the result.
